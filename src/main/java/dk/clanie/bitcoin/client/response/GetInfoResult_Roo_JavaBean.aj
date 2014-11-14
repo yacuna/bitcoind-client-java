@@ -9,7 +9,7 @@ import java.util.Date;
 
 privileged aspect GetInfoResult_Roo_JavaBean {
     
-    public Integer GetInfoResult.getVersion() {
+    public String GetInfoResult.getVersion() {
         return this.version;
     }
     

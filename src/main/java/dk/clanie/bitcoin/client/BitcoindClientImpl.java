@@ -83,8 +83,11 @@ public class BitcoindClientImpl implements BitcoindClient {
 
 
 	// [Collaborators]
-	@Autowired
 	private RestTemplate restTemplate;
+	
+	public void setRestTemplate(RestTemplate rt){
+		restTemplate = rt;
+	}
 
 
 	/**

@@ -52,7 +52,7 @@ import dk.clanie.bitcoin.json.JsonExtra;
 })
 public class GetInfoResult extends JsonExtra {
 
-	private Integer version;
+	private String version;
 	
 	@JsonProperty("protocolversion")
 	private Integer protocolVersion;
