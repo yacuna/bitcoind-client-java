@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.web.client.RestTemplate;
 
 import dk.clanie.bitcoin.AddressAndAmount;
 import dk.clanie.bitcoin.SignatureHashAlgorithm;
@@ -51,7 +52,15 @@ public interface BitcoindClient {
 	 */
 	@Required
 	void setUrl(String url);
-
+	
+	/**
+	 * Sets custom restTemplate for calling bitcoind
+	 * 
+	 * @param restTemplate
+	 */
+	@Required
+	public void setRestTemplate(RestTemplate restTemplate);
+	
 	/**
 	 * Add a nrequired-to-sign multisignature address to the wallet.
 	 * <p>
